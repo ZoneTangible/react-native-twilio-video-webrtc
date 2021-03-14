@@ -7,27 +7,27 @@ declare module "react-native-twilio-video-webrtc" {
     videoTrackSid: string;
   }
 
-  type scaleType = "fit" | "fill";
-  interface TwilioVideoParticipantViewProps extends ViewProps {
+  export type scaleType = "fit" | "fill";
+  export interface TwilioVideoParticipantViewProps extends ViewProps {
     trackIdentifier: TrackIdentifier;
     ref?: React.Ref<any>;
     scaleType?: scaleType;
     applyZOrder?: boolean;
   }
 
-  interface TwilioVideoLocalViewProps extends ViewProps {
+  export interface TwilioVideoLocalViewProps extends ViewProps {
     enabled: boolean;
     ref?: React.Ref<any>;
     scaleType?: scaleType;
     applyZOrder?: boolean;
   }
 
-  interface Participant {
+  export interface Participant {
     sid: string;
     identity: string;
   }
 
-  interface Track {
+  export interface Track {
     enabled: boolean;
     trackName: string;
     trackSid: string;
@@ -40,7 +40,7 @@ declare module "react-native-twilio-video-webrtc" {
 
   export type TrackEventCb = (t: TrackEventCbArgs) => void;
 
-  interface RoomEventCommonArgs {
+  export interface RoomEventCommonArgs {
     roomName: string;
     roomSid: string;
   }
@@ -49,15 +49,15 @@ declare module "react-native-twilio-video-webrtc" {
     error: any;
   };
 
-  type RoomEventArgs = RoomEventCommonArgs & {
+  export type RoomEventArgs = RoomEventCommonArgs & {
     participants: Participant[];
   };
 
-  type ParticipantEventArgs = RoomEventCommonArgs & {
+  export type ParticipantEventArgs = RoomEventCommonArgs & {
     participant: Participant;
   };
 
-  type NetworkLevelChangeEventArgs = {
+  export type NetworkLevelChangeEventArgs = {
     participant: Participant;
     isLocalUser: boolean;
     quality: number;
@@ -96,7 +96,7 @@ declare module "react-native-twilio-video-webrtc" {
     ref?: React.Ref<any>;
   };
 
-  type iOSConnectParams = {
+  export type iOSConnectParams = {
     accessToken: string;
     roomName?: string;
     enableAudio?: boolean;
@@ -110,7 +110,7 @@ declare module "react-native-twilio-video-webrtc" {
     enableNetworkQualityReporting?: boolean;
   };
 
-  type androidConnectParams = {
+  export type androidConnectParams = {
     roomName?: string;
     accessToken: string;
     enableAudio?: boolean;
