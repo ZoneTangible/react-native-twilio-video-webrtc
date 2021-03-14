@@ -12,12 +12,14 @@ declare module "react-native-twilio-video-webrtc" {
     trackIdentifier: TrackIdentifier;
     ref?: React.Ref<any>;
     scaleType?: scaleType;
+    applyZOrder?: boolean;
   }
 
   interface TwilioVideoLocalViewProps extends ViewProps {
     enabled: boolean;
     ref?: React.Ref<any>;
     scaleType?: scaleType;
+    applyZOrder?: boolean;
   }
 
   interface Participant {
@@ -65,7 +67,7 @@ declare module "react-native-twilio-video-webrtc" {
   export type RoomErrorEventCb = (t: RoomErrorEventArgs) => void;
 
   export type ParticipantEventCb = (p: ParticipantEventArgs) => void;
-  
+
   export type NetworkLevelChangeEventCb = (p: NetworkLevelChangeEventArgs) => void;
 
   export type TwilioVideoProps = ViewProps & {
